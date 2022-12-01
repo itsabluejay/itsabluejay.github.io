@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Jay">
+        <title>Login</title>
+
+        <link href="css/landingPage_JGr53679.css" rel="stylesheet">
+        <script defer src="script/index_JGr53679.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="images/vecteezy_cute-astronaut-line-art-design_14220737_513.png" alt="transparent astronaut">
+        </header>
+        <section>
+            <form name="loginForm" action="" method="get" onsubmit="return false">
+                <fieldset>
+                    <legend>Please enter some user info to enter:</legend>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="What's your name?" required>
+                    </div>
+
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="110" placeholder="How old are you?" required>
+                    </div>
+
+                    <div>
+                        <label for="terms">Do you agree to my
+                            <span title="By selecting 'Yes' you agree to give Jay a good grade (jk) ;P"
+                            class="underline"> terms of use</span>?</label>
+                        <span id="terms">
+                            <input type="radio" name="terms" id="terms1" value="yes" required>Yes
+                            <input type="radio" name="terms" id="terms2" value="no">No<br>
+                            <span id="radioValidation"></span>
+                            <!-- radio validation does not work without this extra span. Don't know why.-->
+                        </span>
+                    </div>
+
+                    <div>
+                        <label for="colour">Favourite colour:</label>
+                        <input type="color" name="colour" id="colour" required>
+                    </div>
+                    <div class="center">
+                        <input id="login" class="button" type="submit" name="submit" value="Submit User Data" onclick="signIn()">
+                    </div>
+
+                    <div class="link">
+                        <a id="enter1" class="button" href="page2_JGr53679.html">Have some fun!</a>
+                        <a id="enter2" class="button" href="page3_JGr53679.html">Learn about pigeons!</a>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <div id="spacer"></div><!-- keeps the footer pushed to the bottom -->
+
+        <footer>
+            <hr>
+            <small>
+                <em>Thanks to: </em><a id="attribution" href="https://www.vecteezy.com/free-png/line-art">Line Art PNGs by Vecteezy</a> | <em>Jay Groulx - 300353679 - CSIS 1280 - 2022</em>
+            </small>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,152 @@
+* {
+    box-sizing: content-box;
+}
+
+@keyframes animateGradient {
+    0% {background-position: 0%;}
+    100% {background-position: 100%;}
+}
+
+
+html {
+    height: 100%;
+    background: linear-gradient(340deg, #FC466B 0%, #3F5EFB 100%);
+    background-size: 600%;
+    animation-name: animateGradient;
+    animation: animateGradient 10s linear infinite;
+    animation-direction: alternate;
+}
+/******************/
+/* these are to keep the footer pushed to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+}
+
+div#spacer {
+    flex-grow: 1;
+}
+/******************/
+
+header {
+    display: flex;
+    justify-content: center;
+}
+img {
+    max-height: 80px;
+    margin: 10px;
+}
+
+section {
+    width: 60%;
+    min-width: fit-content;
+
+    background-color: azure;
+    margin: auto;
+    margin-top: 1%;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 7px black;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label > span.underline {
+    text-decoration: underline;
+}
+
+form > fieldset {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+fieldset div {
+    display: flex;
+    flex-flow: row wrap;                
+}
+
+div > label {
+    flex: 1 1 100px;
+    margin: 10px 10px;                
+}
+
+div > span#terms,
+div > input,
+div > select {
+    flex: 3 1 100px;
+    margin: 10px 10px; 
+    justify-content: center;               
+}
+
+fieldset > * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#radioValidation {
+    /*
+    color: red;
+    font-size: smaller;
+    */
+    display: none;
+}
+
+
+/*#login*/
+.button {
+    width: 40%;
+    background-color: #9e52b3;
+    color: whitesmoke;
+    padding: 2px;
+}
+
+.link {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+}
+
+#enter1, #enter2 {
+    display: block;
+    width: 45%;
+    text-align: center;
+    text-decoration: none;
+    border: 2px groove black;
+    visibility: hidden;
+}
+
+a#enter1:hover, a#enter2:hover {
+    background-color: violet;
+}
+
+footer {
+    text-align: right;
+}
+
+small, a#attribution {
+    color: whitesmoke;
+}
+
+a#attribution:hover {
+    color: #3F5EFB;
+}
+
+@media only screen and (min-width: 665px) {
+    fieldset {
+        min-width: 368px;
+    }
+
+    section {
+        padding: 30px;
+        width: 30%;
+    }
+}

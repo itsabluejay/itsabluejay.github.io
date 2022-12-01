@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Jay">
+        <title>Fun stuff</title>
+
+        <link href="css/navBar_JGr53679.css" rel="stylesheet">
+        <link href="css/games_JGr53679.css" rel="stylesheet">
+
+        <script src="script/pigeonKiss_JGr53679.js"></script>
+        <script src="script/wordList_JGr53679.js"></script>
+        <script defer src="script/wordScramble_JGr53679.js"></script>
+        <script src="script/timer_JGr53679.js"></script>
+        <script src="script/printScore_JGr53679.js"></script>
+    </head>
+
+    <body>
+        <header>
+                <!-- Make a real headr, with title, and the ABCs as backgroung img-->
+            <nav class="sidebar">
+                <img id="heart" src="images/6-pixel-heart-4.png" alt="heart">
+                <img id="pigeons" src="images/PNGPIX-COM-Pigeon-PNG-Transparent-Image.png" alt="pigeon pair" onmouseover="kiss()" onmouseout="unkiss()">
+                <div class="mobileHeading">
+                    <h1 id="mobileTitle"><em>Word Scramble</em></h1>
+                </div>
+                <div id="links">
+                    <a href="index.html">Logout</a>
+                    <br>
+                    <a href="page2_JGr53679.html">Word Scramble</a>
+                    <br>
+                    <a href="page3_JGr53679.html">Pigeon Facts</a>
+                </div>
+            </nav>
+        </header>
+       
+        <section>
+            <div id="rules" class="rules card">
+                <h1>HOW TO PLAY:</h1>
+                <div id="rulesTextWrapper">
+                    <ul>
+                        <li>
+                            <p>
+                                When the game starts, you'll have two and a half minutes to unscramble 
+                                as many words as you can. Each word is seven letters long.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Type your guesses into the text box above the scrambled word. To submit 
+                                them, press the 'enter' key on your keyboard, or click "Guess!".
+                                If you need a little help, you can click "Shuffle!" to reorder the letters.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Each correct guess will earn you one point. Each incorrect guess will 
+                                cause you to lose one point. (Don't worry - your score can't drop below zero!)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                When time runs out, you'll be given the opportunity to type in your name for 
+                                the scoreboard. Clicking "Save score!" will update the high 
+                                score table.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="scrambleWrapper" class="scrambleWrapper card">
+                <p id="startButton">
+                    <input id="startGame" class="button" type="button" name="startGame" value="Start the game!">
+                </p>
+                <form name="unscramble" action='' method="get" onsubmit="return false">
+                    <fieldset>
+                        <div id="countDown">
+                            <span id="showTimer"></span>
+                            <span id="showPoints"></span>
+                        </div>
+                        <input type="text" id="guess" name="guess" pattern="[A-Za-z]{7}" placeholder="Guess the word...">
+                        <div id="lettersTarget"></div>
+                        <p id="nameInput">
+                            <label for="name">Save score?</label>
+                            <input type="text" id="name" name="name" pattern="[A-Za-z0-9]{1,15}" value="anon">
+                            <input type="button" id="saveScore" class="button" type="button" name="saveScore" value="Save Score!">
+                        </p>
+                        <input id="submitGuess" class="button" type="submit" name="submit" value="Guess!">
+                        <input id="shuffle" class="button" type="button" name="shuffle" value="Shuffle!">
+                        <input id="playAgain" class="button" type="submit" name="submit" value="Play Again?">
+                    </fieldset>
+                    <small>
+                        Sounds from <a id="soundCredit" href="www.zapsplat.com">Zapsplat.com</a>
+                    </small>
+                </form>
+            </div>
+
+            <div id="scoreboard" class="scoreboard card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">TOP 5 HIGH SCORES</th>
+                        </tr>
+                        <tr>
+                            <th>NAME</th>
+                            <th>SCORE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="name0">Jane Doe</td>
+                            <td id="score0">3</td>
+                        </tr>
+                        <tr>
+                            <td id="name1">John Doe</td>
+                            <td id="score1">2</td>
+                        </tr>
+                        <tr>
+                            <td id="name2">Joe Shmoe</td>
+                            <td id="score2">1</td>
+                        </tr>
+                        <tr>
+                            <td id="name3">Nobody</td>
+                            <td id="score3">0</td>
+                        </tr>
+                        <tr>
+                            <td id="name4">Who?</td>
+                            <td id="score4">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </body>
+</html>
